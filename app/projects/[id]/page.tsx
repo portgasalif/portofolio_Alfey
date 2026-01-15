@@ -32,9 +32,15 @@ export default async function ProjectDetailPage({
           />
         </div>
         <div className="sm:col-span-2">
-          <p>{selectedProject.category}</p>
-          <h1>{selectedProject.title}</h1>
-          <p>{selectedProject.description}</p>
+          <p className="text-sm uppercase font-semibold text-blue-500 mb-4">
+            {selectedProject.category}
+          </p>
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            {selectedProject.title}
+          </h1>
+          <p className="text-lg  text-gray-600 leading-relaxed mt-6">
+            {selectedProject.description}
+          </p>
         </div>
       </div>
     </div>
