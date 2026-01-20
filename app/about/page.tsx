@@ -24,6 +24,20 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
+      <div className="py-16 bg-gray-50">
+        <div className="custom-container">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 ">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center ">
+                <h2 className="text-4xl sm:text-5xl font-bold mb-2">
+                  {stat.value}
+                </h2>
+                <p className="text-sm text-gray-600">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
