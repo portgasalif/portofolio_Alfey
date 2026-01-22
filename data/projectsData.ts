@@ -1,26 +1,29 @@
 export const projectsData = [
   {
     id: 1,
-    title: "Portfolio Website",
+    title: "NextDesk - IT Help Desk System",
     category: "Website",
     description:
-      " A Wedding website project that showcases wedding details, RSVP functionality, and photo galleries to celebrate the special day.",
+      " Help desk ticketing system with role-based access control, ticket management (pending/in-progress/completed), and admin dashboard with real-time stats",
     image: "https://picsum.photos/400/300?random=1",
+    liveUrl: "https://next-desk-system.netlify.app/",
   },
   {
     id: 2,
-    title: "E-commerce Platform",
-    category: "Website",
+    title: "Warung Nida",
+    category: "Web App",
     description:
-      "An online store built with React.js, featuring product listings, shopping cart functionality, and secure payment processing.",
+      "Mobile-first Point of Sale system with inventory management, real-time stock tracking, transaction processing, and sales history",
     image: "https://picsum.photos/400/300?random=2",
+    liveUrl: "https://warungnida.netlify.app/",
   },
   {
     id: 3,
-    title: "Blog Platform",
+    title: "Graha Trisila",
     category: "Website",
     description:
-      "A dynamic blog platform developed using Next.js, allowing users to create, edit, and publish blog posts with rich text formatting and media support.",
+      "Client production website with Google Calendar integration for venue booking, optimized for performance and search rankings",
     image: "https://picsum.photos/400/300?random=3",
+    liveUrl: "https://grahatrisila.com/",
   },
 ];

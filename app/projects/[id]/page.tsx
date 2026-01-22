@@ -8,7 +8,7 @@ export default async function ProjectDetailPage({
   const { id } = await params;
   const projectId = Number(id);
   const selectedProject = projectsData.find(
-    (project) => project.id === projectId
+    (project) => project.id === projectId,
   );
 
   if (!selectedProject) {
@@ -30,6 +30,16 @@ export default async function ProjectDetailPage({
             alt={selectedProject.title}
             className="w-full rounded-lg"
           />
+          {selectedProject.liveUrl && (
+            <a
+              href={selectedProject.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 block w-full text-center px-6 py-4 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+            >
+              Visit {selectedProject.category}
+            </a>
+          )}
         </div>
         <div className="sm:col-span-2">
           <p className="text-sm uppercase font-semibold text-blue-500 mb-4">

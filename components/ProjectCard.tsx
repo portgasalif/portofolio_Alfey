@@ -16,14 +16,10 @@ export default function ProjectCard({
   image,
 }: ProjectCardProps) {
   return (
-    <Link href={`/projects/${id}`} >
-      <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-        <img 
-          src={image} 
-          alt={title}
-          className="w-full h-48 object-cover"
-        />
-        <div className="p-4">
+    <Link href={`/projects/${id}`}>
+      <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden h-full">
+        <img src={image} alt={title} className="w-full h-48 object-cover" />
+        <div className="p-4 ">
           <p className="text-xs uppercase font-semibold text-blue-500 mb-2">
             {category}
           </p>
