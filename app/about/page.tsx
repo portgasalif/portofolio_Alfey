@@ -1,4 +1,4 @@
-import { personalInfo, skills, stats } from "@/data/aboutData";
+import { personalInfo, stats } from "@/data/aboutData";
 
 export default function AboutPage() {
   return (
