@@ -1,6 +1,6 @@
 import ProjectCard from "@/components/ProjectCard";
 import { projectsData } from "@/data/projectsData";
-
+import Image from "next/image";
 export default function Home() {
   return (
     <>
@@ -13,8 +13,14 @@ export default function Home() {
             Welcome to my portfolio website!
           </p>
         </div>
-        <div className="w-full sm:w-1/2 bg-gray-200 h-64 sm:h-80 rounded-lg flex items-center justify-center">
-          <p className="text-grey-400">Image Placeholder</p>
+        <div className="w-full sm:w-1/2">
+          <Image
+            src="/images/undraw_programming_j1zw.svg"
+            alt="Developer Ilustration"
+            width={800}
+            height={572}
+            className="w-full h-auto"
+          />
         </div>
       </section>
       <section className="custom-container py-16">

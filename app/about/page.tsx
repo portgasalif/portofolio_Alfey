@@ -6,10 +6,10 @@ export default function AboutPage() {
     <div>
       <div className="custom-container py-10 sm:py-20 ">
         <div className="flex flex-col sm:flex-row gap-10">
-          <div className="w-full sm:w-2/5">
+          <div className="w-full sm:w-1/4">
             <Image
               className="rounded-lg w-full h-auto"
-              src=""
+              src="/images/Pas-foto.jpeg"
               alt="photo"
               width={300}
               height={400}
