@@ -5,7 +5,7 @@ export const projectsData = [
     category: "Website",
     description:
       " Help desk ticketing system with role-based access control, ticket management (pending/in-progress/completed), and admin dashboard with real-time stats",
-    image: "/images/next-desk.png",
+    image: "/images/nextdesk.png",
     liveUrl: "https://next-desk-system.netlify.app/",
   },
   {
