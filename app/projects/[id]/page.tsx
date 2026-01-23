@@ -1,5 +1,6 @@
 import { projectsData } from "@/data/projectsData";
 import Link from "next/link";
+import Image from "next/image";
 export default async function ProjectDetailPage({
   params,
 }: {
@@ -25,10 +26,12 @@ export default async function ProjectDetailPage({
       </Link>
       <div className="grid grid-cols-1 sm:grid-cols-3 sm:gap-10 mt-12">
         <div className="mb-10 sm:mb-0 ">
-          <img
+          <Image
             src={selectedProject.image}
             alt={selectedProject.title}
             className="w-full rounded-lg"
+            width={400}
+            height={300}
           />
           {selectedProject.liveUrl && (
             <a

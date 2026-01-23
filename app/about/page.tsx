@@ -1,4 +1,5 @@
 import { personalInfo, stats } from "@/data/aboutData";
+import Image from "next/image";
 
 export default function AboutPage() {
   return (
@@ -6,10 +7,12 @@ export default function AboutPage() {
       <div className="custom-container py-10 sm:py-20 ">
         <div className="flex flex-col sm:flex-row gap-10">
           <div className="w-full sm:w-2/5">
-            <img
+            <Image
               className="rounded-lg w-full h-auto"
-              src="https://picsum.photos/400/300?random=1"
+              src=""
               alt="photo"
+              width={300}
+              height={400}
             />
           </div>
           <div className="w-full sm:w-3/5">
