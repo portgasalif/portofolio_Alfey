@@ -1,7 +1,22 @@
 @import "tailwindcss";
 
+:root {
+  --color-bg: #faf8f3;
+  --color-text: #1f2937;
+  --color-accent: #d97706;
+}
+.dark {
+  --color-bg: #0f172a;
+  --color-text: #e2e8f0;
+  --color-accent: #fbbf24;
+}
 body {
   font-family: var(--font-geist-sans), sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 @layer components {
