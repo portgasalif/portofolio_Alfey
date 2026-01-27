@@ -18,7 +18,7 @@ export default function AboutPage() {
           <div className="w-full sm:w-3/5">
             {personalInfo.bio.map((text, index) => (
               <p
-                className="text-lg text-gray-700 leading-relaxed mb-4"
+                className="text-lg text-(--text-primary) leading-relaxed mb-4"
                 key={index}
               >
                 {text}
@@ -27,15 +27,15 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-      <div className="py-16 bg-gray-50">
+      <div className="py-16 bg-(--color-bg-secondary)">
         <div className="custom-container">
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 ">
             {stats.map((stat, index) => (
               <div key={index} className="text-center ">
-                <h2 className="text-4xl sm:text-5xl font-bold mb-2">
+                <h2 className="text-4xl sm:text-5xl font-bold mb-2 text-(--color-text)">
                   {stat.value}
                 </h2>
-                <p className="text-sm text-gray-600">{stat.label}</p>
+                <p className="text-sm text-(--color-text)">{stat.label}</p>
               </div>
             ))}
           </div>

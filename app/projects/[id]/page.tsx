@@ -48,10 +48,10 @@ export default async function ProjectDetailPage({
           <p className="text-sm uppercase font-semibold text-blue-500 mb-4">
             {selectedProject.category}
           </p>
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl font-bold text-(--color-text) mb-6">
             {selectedProject.title}
           </h1>
-          <p className="text-lg  text-gray-600 leading-relaxed mt-6">
+          <p className="text-lg text-(--color-text-secondary) leading-relaxed mt-6">
             {selectedProject.description}
           </p>
         </div>
