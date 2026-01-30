@@ -9,12 +9,6 @@ export const personalInfo = {
   email: "aliffachrel@gmail.com",
 };
 
-export const skills = {
-  frontend: ["React.js", "Next.js", "JavaScript", "TypeScript", "Tailwind CSS"],
-  backend: ["PostgreSQL", "Firebase"],
-  tools: ["Git", "Figma", "Vercel"],
-};
-
 export const stats = [
   { label: "Years Experience", value: "2+" },
   { label: "Projects Completed", value: "10+" },

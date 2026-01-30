@@ -18,7 +18,7 @@ export default function AboutPage() {
           <div className="w-full sm:w-3/5">
             {personalInfo.bio.map((text, index) => (
               <p
-                className="text-lg text-(--text-primary) leading-relaxed mb-4"
+                className="text-lg text-(--color-text) leading-relaxed mb-4"
                 key={index}
               >
                 {text}
