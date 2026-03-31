@@ -1,6 +1,7 @@
 import { projectsData } from "@/data/projectsData";
 import Link from "next/link";
 import Image from "next/image";
+import { FaGithub } from "react-icons/fa";
 export default async function ProjectDetailPage({
   params,
 }: {
@@ -54,6 +55,34 @@ export default async function ProjectDetailPage({
           <p className="text-lg text-(--color-text-secondary) leading-relaxed mt-6">
             {selectedProject.description}
           </p>
+          {selectedProject.techStack && (
+            <div className="mt-8">
+              <h2 className="text-sm font-semibold uppercase tracking-wider text-(--color-text-secondary) mb-3">
+                Tech Stack
+              </h2>
+              <div className="flex flex-wrap gap-2">
+                {selectedProject.techStack.map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-3 py-1.5 bg-(--color-bg-secondary) border border-(--color-border) rounded-full text-sm text-(--color-text) font-medium"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+          {selectedProject.githubUrl && (
+            <a
+              href={selectedProject.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex items-center gap-2 text-(--color-text-secondary) hover:text-(--color-text) transition-colors"
+            >
+              <FaGithub size={20} />
+              <span className="font-medium">View on GitHub</span>
+            </a>
+          )}
         </div>
       </div>
     </div>

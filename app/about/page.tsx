@@ -1,4 +1,4 @@
-import { personalInfo, stats } from "@/data/aboutData";
+import { personalInfo, stats, skills } from "@/data/aboutData";
 import Image from "next/image";
 
 export default function AboutPage() {
@@ -39,6 +39,30 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
+        </div>
+      </div>
+      <div className="custom-container py-16">
+        <h2 className="text-3xl font-bold text-(--color-text) mb-10">
+          Skills & Tech Stack
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          {skills.map((skill, index) => (
+            <div key={index}>
+              <h3 className="text-sm font-semibold uppercase tracking-wider text-(--color-text-secondary) mb-3">
+                {skill.category}
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {skill.items.map((item) => (
+                  <span
+                    key={item}
+                    className="px-3 py-1.5 bg-(--color-bg-secondary) border border-(--color-border) rounded-full text-sm text-(--color-text) font-medium"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

@@ -13,7 +13,7 @@ export default function ContactPage() {
           to new opportunities. Reach out and let&apos;s make something great!
         </p>
       </div>
-      <div className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+      <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
         <a
           href="https://www.linkedin.com/in/alif-fachrel-anargya/"
           target="_blank"
