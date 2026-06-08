@@ -26,9 +26,9 @@ export const projectsData = [
     title: "Graha Trisila",
     category: "Production Website",
     description:
-      "Client production website generating 60+ monthly organic visitors through mobile-first design, Google Calendar integration for real-time venue availability, and technical SEO (structured data, Open Graph, mobile-first indexing).",
+      "Client production website growing organic traffic 18x in under a year — 22,600+ organic impressions, 85% mobile traffic share, zero paid ads — with Google Calendar integration for real-time venue availability and technical SEO (structured data, Open Graph, mobile-first indexing).",
     image: "/images/trisila.png",
     liveUrl: "https://grahatrisila.com/",
-    techStack: ["Next.js", "Tailwind CSS", "Google Calendar API", "SEO"],
+    techStack: ["HTML", "CSS", "JavaScript", "Google Calendar API", "SEO"],
   },
 ];
