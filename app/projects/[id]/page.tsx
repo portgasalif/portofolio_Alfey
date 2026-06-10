@@ -2,6 +2,7 @@ import { projectsData } from "@/data/projectsData";
 import Link from "next/link";
 import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
+import ProjectCard from "@/components/ProjectCard";
 export default async function ProjectDetailPage({
   params,
 }: {
@@ -83,6 +84,18 @@ export default async function ProjectDetailPage({
               <span className="font-medium">View on GitHub</span>
             </a>
           )}
+        </div>
+      </div>
+      <div className="mt-20 border-t pt-6 border-(--color-border)">
+        <h2 className="font-bold text-2xl text-(--color-text) mb-6">
+          Other Projects
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projectsData
+            .filter((project) => project.id !== projectId)
+            .map((project) => (
+              <ProjectCard key={project.id} {...project} />
+            ))}
         </div>
       </div>
     </div>
