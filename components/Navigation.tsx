@@ -26,11 +26,11 @@ export default function Navigation() {
   };
   return (
     <>
-      <nav className="fixed top-0 w-full bg-(--color-bg) shadow-md z-50">
+      <nav className="fixed top-0 w-full bg-(--color-bg)/80 backdrop-blur-md border-b border-(--color-border) z-50">
         <div className="custom-container">
-          <div className=" flex justify-between items-center py-6">
+          <div className=" flex justify-between items-center py-4">
             <Link href="/" className="text-2xl font-bold text-(--color-text)">
-              Alif
+              Alif<span className="text-(--color-accent)">.</span>
             </Link>
             <button
               onClick={toggleMobileMenu}
@@ -70,7 +70,7 @@ export default function Navigation() {
         ></div>
       )}
       <div
-        className={`fixed right-0 top-0 h-screen w-64 bg-(--color-bg) z-50 md:hidden transform transition-transform duration-300 shadow-xl ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}
+        className={`fixed right-0 top-0 h-screen w-64 bg-(--color-bg) border-l border-(--color-border) z-50 md:hidden transform transition-transform duration-300 shadow-xl ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}
       >
         <div className="flex flex-col h-full pt-16 px-6">
           <button

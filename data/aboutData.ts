@@ -2,9 +2,9 @@ export const personalInfo = {
   name: "Alif Fachrel Anargya",
   title: "Frontend Developer",
   bio: [
-    "Hey, I'm Alif — a Frontend Developer specializing in React and Next.js, actively expanding into full-stack development with TypeScript and PostgreSQL.",
-    "In production, I built a wedding venue website that grew organic traffic 18x in under a year — reaching 22,600+ organic impressions with 85% mobile traffic share, zero paid ads — as the sole developer from design to deployment. I also shipped a full-stack IT help desk system and a mobile-first POS app used by a real small business.",
-    "Currently open to full-time roles or freelance projects. If you're working on something cool or just want to chat about web stuff, let's connect!",
+    "Hey, I'm Alif, a Frontend Developer with production experience in React, Next.js, and TypeScript, actively expanding into full-stack development with PostgreSQL.",
+    "I grew a wedding venue website's organic traffic 18x in under a year as the sole developer, reaching 22,600+ organic impressions with 85% mobile traffic share and zero paid ads. I also shipped a full-stack IT help desk app from database schema to deployment, and a mobile-first POS app used by a real small business.",
+    "I bring that same ownership to everything I build. Currently open to full-time roles or freelance projects. If you're working on something cool or just want to chat about web stuff, let's connect!",
   ],
   email: "aliffachrel@gmail.com",
 };

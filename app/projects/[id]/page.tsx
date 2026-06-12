@@ -15,14 +15,26 @@ export default async function ProjectDetailPage({
   );
 
   if (!selectedProject) {
-    return <div>Project not found</div>;
+    return (
+      <div className="custom-container py-20 text-center">
+        <h1 className="text-3xl font-bold text-(--color-text) mb-4">
+          Project not found
+        </h1>
+        <Link
+          href="/projects"
+          className="font-medium text-(--color-accent) hover:text-(--color-accent-hover) transition-colors"
+        >
+          &larr; Back to Projects
+        </Link>
+      </div>
+    );
   }
 
   return (
     <div className="custom-container py-20">
       <Link
         href="/projects"
-        className="text-blue-500 hover:text-blue-600 inline-block mb-6"
+        className="inline-block mb-6 font-medium text-(--color-text-secondary) hover:text-(--color-accent) transition-colors"
       >
         &larr; Back to Projects
       </Link>
@@ -31,7 +43,7 @@ export default async function ProjectDetailPage({
           <Image
             src={selectedProject.image}
             alt={selectedProject.title}
-            className="w-full rounded-lg"
+            className="w-full rounded-xl ring-1 ring-(--color-border) shadow-lg"
             width={400}
             height={300}
           />
@@ -40,14 +52,14 @@ export default async function ProjectDetailPage({
               href={selectedProject.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 block w-full text-center px-6 py-4 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+              className="mt-4 block w-full text-center px-6 py-4 bg-(--color-accent) text-white font-semibold rounded-lg hover:bg-(--color-accent-hover) transition-colors"
             >
-              Visit {selectedProject.category}
+              Visit Live Site
             </a>
           )}
         </div>
         <div className="sm:col-span-2">
-          <p className="text-sm uppercase font-semibold text-blue-500 mb-4">
+          <p className="text-sm uppercase tracking-wider font-semibold text-(--color-accent) mb-4">
             {selectedProject.category}
           </p>
           <h1 className="text-4xl font-bold text-(--color-text) mb-6">
@@ -65,7 +77,7 @@ export default async function ProjectDetailPage({
                 {selectedProject.techStack.map((tech) => (
                   <span
                     key={tech}
-                    className="px-3 py-1.5 bg-(--color-bg-secondary) border border-(--color-border) rounded-full text-sm text-(--color-text) font-medium"
+                    className="px-3 py-1.5 bg-(--color-card) border border-(--color-border) rounded-full text-sm text-(--color-text) font-medium"
                   >
                     {tech}
                   </span>
