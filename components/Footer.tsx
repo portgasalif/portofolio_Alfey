@@ -2,32 +2,31 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-(--color-bg-secondary) border-t border-(--color-border)">
-      <div className="custom-container py-8">
-        <h1 className="text-center text-2xl font-semibold mb-4 text-(--color-text)">
-          Follow Me
-        </h1>
-        <div className="flex justify-center gap-6 mb-4">
+    <footer className="border-t border-(--color-border)">
+      <div className="custom-container py-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
+        <p className="text-sm text-(--color-text-secondary)">
+          &copy; {new Date().getFullYear()} Alif Fachrel. All rights reserved.
+        </p>
+        <div className="flex items-center gap-5">
           <a
             href="https://github.com/portgasalif"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-(--color-text) hover:text-(--color-text-secondary) transition-colors"
+            aria-label="GitHub"
+            className="text-(--color-text-secondary) hover:text-(--color-accent) transition-colors"
           >
-            <FaGithub size={36} />
+            <FaGithub size={22} />
           </a>
           <a
             href="https://www.linkedin.com/in/alif-fachrel-anargya/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-(--color-text) hover:text-(--color-text-secondary) transition-colors"
+            aria-label="LinkedIn"
+            className="text-(--color-text-secondary) hover:text-(--color-accent) transition-colors"
           >
-            <FaLinkedin size={36} />
+            <FaLinkedin size={22} />
           </a>
         </div>
-        <p className="text-center text-sm text-(--color-text)">
-          &copy; {new Date().getFullYear()} Alif Fachrel. All rights reserved.
-        </p>
       </div>
     </footer>
   );

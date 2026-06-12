@@ -1,5 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
+import { HiArrowRight } from "react-icons/hi";
+
 interface ProjectCardProps {
   id: number;
   title: string;
@@ -16,24 +18,36 @@ export default function ProjectCard({
   image,
 }: ProjectCardProps) {
   return (
-    <Link href={`/projects/${id}`}>
-      <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden h-full">
-        <Image
-          src={image}
-          alt={title}
-          className="w-full h-48 object-cover "
-          width={400}
-          height={300}
-        />
-        <div className="p-4 ">
-          <p className="text-xs uppercase font-semibold text-blue-500 mb-2">
+    <Link href={`/projects/${id}`} className="group block h-full">
+      <article className="flex h-full flex-col overflow-hidden rounded-xl border border-(--color-border) bg-(--color-card) transition-all duration-300 hover:-translate-y-1 hover:border-(--color-accent)/50 hover:shadow-xl">
+        <div className="overflow-hidden">
+          <Image
+            src={image}
+            alt={title}
+            className="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            width={400}
+            height={300}
+          />
+        </div>
+        <div className="flex flex-1 flex-col p-5">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-(--color-accent)">
             {category}
           </p>
-          <h2 className="text-xl font-bold text-gray-800 mb-2">{title}</h2>
-
-          <p className="text-sm text-gray-600 line-clamp-3">{description}</p>
+          <h3 className="mb-2 text-xl font-bold text-(--color-text)">
+            {title}
+          </h3>
+          <p className="text-sm leading-relaxed text-(--color-text-secondary) line-clamp-3">
+            {description}
+          </p>
+          <span className="mt-auto inline-flex items-center gap-1 pt-4 text-sm font-medium text-(--color-text-secondary) transition-colors group-hover:text-(--color-accent)">
+            View project
+            <HiArrowRight
+              size={14}
+              className="transition-transform group-hover:translate-x-1"
+            />
+          </span>
         </div>
-      </div>
+      </article>
     </Link>
   );
 }

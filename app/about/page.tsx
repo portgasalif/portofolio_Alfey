@@ -4,12 +4,23 @@ export default function AboutPage() {
   return (
     <div>
       <div className="custom-container py-10 sm:py-20 ">
+        <div className="mb-12">
+          <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-(--color-accent)">
+            About Me
+          </p>
+          <h1 className="text-4xl sm:text-5xl font-bold text-(--color-text)">
+            {personalInfo.name}
+          </h1>
+          <p className="mt-2 text-lg text-(--color-text-secondary)">
+            {personalInfo.title}
+          </p>
+        </div>
         <div className="flex flex-col sm:flex-row gap-10">
           <div className="w-full sm:w-1/4">
             <Image
-              className="rounded-lg w-full h-auto"
+              className="w-full h-auto rounded-2xl ring-1 ring-(--color-border) shadow-lg"
               src="/images/Pas-foto.jpeg"
-              alt="photo"
+              alt={personalInfo.name}
               width={300}
               height={400}
             />
@@ -26,15 +37,17 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-      <div className="py-16 bg-(--color-bg-secondary)">
+      <div className="py-16 bg-(--color-bg-secondary) border-y border-(--color-border)">
         <div className="custom-container">
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 ">
             {stats.map((stat, index) => (
               <div key={index} className="text-center ">
-                <h2 className="text-4xl sm:text-5xl font-bold mb-2 text-(--color-text)">
+                <h2 className="text-4xl sm:text-5xl font-bold mb-2 text-(--color-accent)">
                   {stat.value}
                 </h2>
-                <p className="text-sm text-(--color-text)">{stat.label}</p>
+                <p className="text-sm text-(--color-text-secondary)">
+                  {stat.label}
+                </p>
               </div>
             ))}
           </div>
@@ -54,7 +67,7 @@ export default function AboutPage() {
                 {skill.items.map((item) => (
                   <span
                     key={item}
-                    className="px-3 py-1.5 bg-(--color-bg-secondary) border border-(--color-border) rounded-full text-sm text-(--color-text) font-medium"
+                    className="px-3 py-1.5 bg-(--color-card) border border-(--color-border) rounded-full text-sm text-(--color-text) font-medium transition-colors hover:border-(--color-accent)/50"
                   >
                     {item}
                   </span>

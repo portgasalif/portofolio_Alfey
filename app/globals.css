@@ -2,24 +2,29 @@
 
 :root {
   --color-bg: #faf8f3;
-  --color-bg-secondary: #f3f4f6; 
+  --color-bg-secondary: #f3f4f6;
+  --color-card: #ffffff;
   --color-text: #1f2937;
   --color-text-secondary: #4b5563;
   --color-accent: #d97706;
   --color-accent-hover: #b45309;
   --color-border: #e5e7eb;
-
 }
 .dark {
   --color-bg: #0f172a;
-  --color-bg-secondary: #1e293b; 
+  --color-bg-secondary: #1e293b;
+  --color-card: #1e293b;
   --color-text: #e2e8f0;
   --color-text-secondary: #94a3b8;
   --color-accent: #fbbf24;
   --color-accent-hover: #f59e0b;
   --color-border: #334155;
-
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-geist-sans), sans-serif;
   background-color: var(--color-bg);
@@ -27,6 +32,22 @@ body {
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: #fff;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @layer components {
@@ -44,5 +65,9 @@ body {
       padding-left: 6rem;
       padding-right: 6rem;
     }
+  }
+
+  .animate-fade-up {
+    animation: fade-up 0.6s ease-out both;
   }
 }
