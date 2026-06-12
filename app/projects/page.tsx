@@ -12,7 +12,7 @@ export default function ProjectPage() {
           My Projects
         </h1>
         <p className="mt-4 text-lg text-(--color-text-secondary) max-w-2xl mx-auto">
-          A selection of things I&apos;ve built — from production websites to
+          A selection of things I&apos;ve built, from production websites to
           full-stack apps.
         </p>
       </div>
